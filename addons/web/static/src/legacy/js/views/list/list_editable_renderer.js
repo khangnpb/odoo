@@ -1189,7 +1189,7 @@ ListRenderer.include({
             const resizeHandle = document.createElement('span');
             resizeHandle.classList = 'o_resize';
             resizeHandle.onclick = this._onClickResize.bind(this);
-            resizeHandle.onmousedown = this._onStartResize.bind(this);
+            // resizeHandle.onmousedown = this._onStartResize.bind(this);
             $th.append(resizeHandle);
         }
         return $th;

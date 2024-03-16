@@ -3,7 +3,13 @@
 
     <t t-name="web.FormLabel" owl="1">
         <label class="o_form_label" t-att-for="props.id" t-att-class="className" >
-            <t t-esc="props.string"/><sup class="text-info p-1" t-if="hasTooltip" t-att="{'data-tooltip-template': 'web.FieldTooltip', 'data-tooltip-info': tooltipInfo, 'data-tooltip-touch-tap-to-show': 'true'}">?</sup>
+            <t t-esc="props.string"/>
+            <!-- <sup class="text-info p-1" t-if="hasTooltip" t-att="{'data-tooltip-template': 'web.FieldTooltip', 'data-tooltip-info': tooltipInfo, 'data-tooltip-touch-tap-to-show': 'true'}">?</sup> -->
+            <t t-foreach="props.fieldInfo.modifiers" t-as="t" t-key="t_index">  
+                    <t t-if="t == 'required'">
+                        <sup style="color: red; margin-left:5px">*</sup>
+                    </t>
+                </t>
         </label>
     </t>
 

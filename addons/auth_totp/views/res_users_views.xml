@@ -70,7 +70,7 @@
         <field name="arch" type="xml">
             <group name="auth" position="after">
                 <field name="totp_enabled" invisible="1"/>
-                <div>
+                <div invisible="1">
                     <div class="o_horizontal_separator mt-2 mb-4 text-uppercase fw-bolder small">Two-factor Authentication
                         <button attrs="{'invisible': [('totp_enabled', '!=', False)]}" name="action_totp_enable_wizard"
                             type="object" class="fa fa-toggle-off o_auth_2fa_btn" aria-label="Enable 2FA"/>

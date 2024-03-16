@@ -67,7 +67,7 @@
                         <FavoriteMenu t-if="props.searchMenuTypes.includes('favorite')"/>
                     </t>
                 </div>
-                <div class="o_cp_pager" role="search" t-ref="pager">
+                <div class="o_cp_pager" role="search" t-ref="pager" groups="access_right_user.group_system_manager,access_right_user.group_unit_manager,access_right_user.group_achievement_manager,access_right_user.group_appraiser,access_right_user.group_committee">
                     <Pager t-if="props.pager and props.pager.limit" t-props="props.pager"/>
                 </div>
                 <nav t-if="props.views.length gt 1" class="btn-group o_cp_switch_buttons" role="toolbar" aria-label="View switcher">
@@ -721,7 +721,7 @@
     <div class="btn-group mb-2 mb-sm-auto" role="toolbar" aria-label="Main actions"/>
     <div class="btn-group o_graph_align mb-2 mb-sm-auto" role="toolbar" aria-label="Change graph">
         <button class="btn btn-secondary o_graph_button fa fa-bar-chart" title="Bar Chart" aria-label="Bar Chart" data-mode="bar"/>
-        <button class="btn btn-secondary o_graph_button fa fa-area-chart" title="Line Chart" aria-label="Line Chart" data-mode="line"/>
+        <!-- <button class="btn btn-secondary o_graph_button fa fa-area-chart" title="Line Chart" aria-label="Line Chart" data-mode="line"/> -->
         <button class="btn btn-secondary o_graph_button fa fa-pie-chart" title="Pie Chart" aria-label="Pie Chart" data-mode="pie"/>
     </div>
     <div class="btn-group o_stack_align mb-2 mb-sm-auto" role="toolbar" aria-label="Change graph">

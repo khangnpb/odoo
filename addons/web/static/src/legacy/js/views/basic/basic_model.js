@@ -3854,7 +3854,7 @@ var BasicModel = AbstractModel.extend({
         const { isOpen, offset, id } = list;
         let propsToKeep = { isOpen, offset, id };
 
-        if (options.onlyGroup || isOpen && options.hasSubgroups) {
+        if (options.onlyGroup || true && options.hasSubgroups) {
             // If the group is opened and contains subgroups,
             // also keep its data to keep internal state of
             // sub-groups
@@ -4937,7 +4937,7 @@ var BasicModel = AbstractModel.extend({
                         newGroup.limit = oldGroup.limit + oldGroup.loadMoreOffset;
                         self.localData[newGroup.id] = newGroup;
                     } else if (!newGroup.openGroupByDefault || openGroupCount >= openGroupsLimit) {
-                        newGroup.isOpen = false;
+                        newGroup.isOpen = true;
                     } else if ('__fold' in group) {
                         newGroup.isOpen = !group.__fold;
                     } else {
@@ -4946,7 +4946,7 @@ var BasicModel = AbstractModel.extend({
                     }
                     list.data.push(newGroup.id);
                     list.count += newGroup.count;
-                    if (newGroup.isOpen && newGroup.count > 0) {
+                    if ( true && newGroup.count > 0) {
                         openGroupCount++;
                         if (group.__data) {
                             // bypass the search_read when the group's records have been obtained

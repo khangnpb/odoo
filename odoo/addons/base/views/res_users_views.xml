@@ -253,7 +253,7 @@
                                 <field name="groups_id"/>
                             </page>
                             <page string="Preferences" name="preferences">
-                                <group>
+                                <group invisible="1">
                                     <group string="Localization" name="preferences">
                                         <field name="active" invisible="1"/>
                                         <label for="lang" />
@@ -452,7 +452,7 @@
                         <field name="name" readonly="1" class="oe_inline"/>
                     </h1>
                     <notebook>
-                        <page string="Preferences" name="preferences_page">
+                        <page string="Preferences" name="preferences_page" invisible="1" >
                             <group name="preferences">
                                 <group>
                                     <field name="email" widget="email" readonly="0"/>
@@ -485,12 +485,15 @@
                             <group name="preference_contact"></group>
                         </page>
                         <page string="Account Security">
-                            <group name="auth" string="Password Management">
+                            <group name="auth" string="Password Management" groups="access_right_user.group_system_manager, access_right_user.group_unit_manager, access_right_user.group_achievement_manager, access_right_user.group_appraiser, access_right_user.group_committee" >
                                 <div colspan="2">
                                     <button name="preference_change_password" type="object" string="Change password" class="btn btn-secondary"/>
                                 </div>
                             </group>
-                            <group string="API Keys">
+                            <div groups="access_right_user.group_mem_user">
+                                <span>Tài khoản Google không cung cấp dịch vụ đổi mật khẩu</span>
+                            </div>
+                            <group string="API Keys" invisible="1">
                                 <div class="text-muted" colspan="2">
                                     API Keys are used to connect to Odoo from external tools without the need for a password or Two-factor Authentication.
                                     <a href="https://www.odoo.com/documentation/16.0/developer/misc/api/external_api.html#api-keys" target="_blank">

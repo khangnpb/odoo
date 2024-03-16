@@ -37,9 +37,9 @@
                                               t-esc="column.label"/>
                                         <i t-att-class="getSortableIconClass(column)"/>
                                     </div>
-                                    <span t-if="!isEmpty"
+                                    <!-- <span t-if="!isEmpty"
                                           class="o_resize position-absolute top-0 end-0 bottom-0 ps-1 bg-black-25 opacity-0 opacity-50-hover z-index-1"
-                                          t-on-mousedown.stop.prevent="onStartResize"/>
+                                          t-on-mousedown.stop.prevent="onStartResize"/> -->
                                 </t>
                             </th>
                             <th t-else="" t-on-keydown.synthetic="(ev) => this.onCellKeydown(ev)" t-att-class="{o_list_button: column.type === 'button_group'}"/>

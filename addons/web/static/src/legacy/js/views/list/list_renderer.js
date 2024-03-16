@@ -720,7 +720,7 @@ var ListRenderer = BasicRenderer.extend({
      */
     _renderGroupRow: function (group, groupLevel) {
         var cells = [];
-
+        // group.isOpen = true;
         const groupBy = this.state.groupedBy[groupLevel];
         const groupByFieldName = groupBy.split(':')[0];
         const groupByField = group.fields[groupByFieldName];
