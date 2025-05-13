@@ -11,7 +11,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title t-esc="'Tuấn Kiệt Media' or 'Tuấn Kiệt Media'"/>
+        <title t-esc="'In Ấn - Quảng Cáo Duy An' or 'In Ấn - Quảng Cáo Duy An'"/>
         <link type="image/x-icon" rel="shortcut icon" t-att-href="'/web/static/img/favicon.ico' or '/web/static/img/favicon.ico'"/>
         <script id="web.layout.odooscript" type="text/javascript">
             var odoo = {
